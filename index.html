@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dateofbirth checker</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="flex flex-col sm:flex- justify-center items-center h-screen">
+        <label for="name">Ask me :</label>
+        <input type="text" id="who" placeholder="type who" class="text-center border"><br><br>
+        <button onclick="search()">search</button><br><br>
+        <p id="result"></p>
+    </div>
+    <script>
+        function search() {
+            let code = document.getElementById("who").value;
+ if (code === "who") {
+    document.getElementById("result").innerHTML = `
+        <table class="border border-gray-300 rounded-lg overflow-hidden shadow-md">
+            <thead class="bg-gray-200">
+                <tr>
+                    <th class="border border-gray-300 px-4 py-2 text-left">Field</th>
+                    <th class="border border-gray-300 px-4 py-2 text-left">Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="hover:bg-gray-50">
+                    <td class="border border-gray-300 px-4 py-2 font-semibold">name</td>
+                    <td class="border border-gray-300 px-4 py-2">Ahmed Intiyaaz Shakil</td>
+                </tr>
+                <tr class="hover:bg-gray-50">
+                    <td class="border border-gray-300 px-4 py-2 font-semibold">Gender</td>
+                    <td class="border border-gray-300 px-4 py-2">Male</td>
+                </tr>
+                <tr class="hover:bg-gray-50">
+                    <td class="border border-gray-300 px-4 py-2 font-semibold">Status</td>
+                    <td class="border border-gray-300 px-4 py-2">Married</td>
+                </tr>
+                <tr class="hover:bg-gray-50">
+                    <td class="border border-gray-300 px-4 py-2 font-semibold">Profession</td>
+                    <td class="border border-gray-300 px-4 py-2">web Developer</td>
+                </tr>
+                  <tr class="hover:bg-gray-50">
+                    <td class="border border-gray-300 px-4 py-2 font-semibold">comment</td>
+                    <td class="border border-gray-300 px-4 py-2">don't judge a book by it's cover oishe</td>
+                </tr>
+            </tbody>
+        </table>
+    `;
+}
+
+                
+               
+            else if (name== "tanha") {
+                document.getElementById("result").innerText ="18-02-2004";
+            }else if (name=="addhaay ") {
+                document.getElementById("result").innerText ="29-11-2020";
+            }
+            else {
+                document.getElementById("result").innerText = "not matched";
+            }
+        }
+    </script>
+   
+
+    
+</body>
+</html>
